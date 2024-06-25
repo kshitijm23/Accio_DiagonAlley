@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>ASSIGNMENT 1 Accio Diagon Alley</title>
+    
+    <link rel="stylesheet" href="Web-Ass1-CSS.css" />
+  </head>
+  <body>
+
+    <header>
+        <a href="#" class="logo">MUGGLES' DIAGON ALLEY</a>
+        <div>
+        
+        
+        
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#recent">Recent Work</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+        
+    </div>
+    <img class="logoimg" src="images/logo.svg" alt="">
+    
+    </header>
+
+<section id="landing">
+    <div class="landingimg" id="home">
+    <img class="landimg" src="images/muggle.jpg" alt="">
+</div>
+</section>
+
+    <section id="page">
+        
+            <div class="page-heading" id="recent">
+                <span>My Recent Work</span>
+                <h3>Harry Potter Merchandise</h3>
+            </div>  
+                <div class="page-container">
+            <!-- PAGE 1 -->
+            
+            <div class="page-post">'
+                <div class="page-img">
+                    <img src="images/landing.jpg" alt="">
+                </div>
+                <div class="page-text">
+                    <span>In Combo Offers</span>
+                    <a href="#" class="page-title">Character Sets</a>
+                    <p>For those who love to go big when it comes to their favorite Characters. Limited in stock</p>
+                    
+                    <button class="button" id="open-dialog"><a href="#">Read More</a></button>
+
+                    <dialog id="my-dialog">
+                        <h2>Character Sets</h2>
+                        <p>Nothing more to show here yet... Stay Tuned!</p>
+                        <button id="close-dialog">Close</button>
+                     </dialog>
+
+                </div>
+                    
+            </div>
+        
+
+        <!-- PAGE 2 -->
+        <div class="page-post">'
+            <div class="page-img">
+                <img class="nf" src="images/nf1.jpg" alt="">
+            </div>
+            <div class="page-text">
+                <span>For Movie Lovers</span>
+                <a href="#" class="page-title">Wands</a>
+                <p>For the hardcore Harry Potter movie lovers, we have the character specific wands for almost all your favourite characters</p>
+                
+                <button class="button" id="open-dialog1"><a href="#">Read More</a></button>
+                <dialog id="my-dialog1">
+                    <h2>Wands</h2>
+                    <p>Nothing more to show here yet... Stay Tuned!</p>
+                    <button id="close-dialog1">Close</button>
+                 </dialog>
+
+            </div>
+                
+        </div>
+    
+
+<!-- Page3 -->
+<div class="page-post">'
+    <div class="page-img">
+        <img src="images/disp.jpg" alt="">
+    </div>
+    <div class="page-text">
+        <span>For those who like to go big </span>
+        <a href="#" class="page-title">Wand Sets</a>
+        <p>Not satisfied with just one wand in possesion? Well you can get more or all of them in our specially curated sets</p>
+        
+        <button class="button" id="open-dialog2"><a href="#">Read More</a></button>
+
+        <dialog id="my-dialog2">
+            <h2>Wand Sets</h2>
+            <p>Nothing more to show here yet... Stay Tuned!</p>
+            <button id="close-dialog2">Close</button>
+         </dialog>
+
+    </div>
+        
+</div>
+</div>
+</div>
+
+
+
+    </section>
+
+    <section>
+        <div class="page-heading" id="recent">
+            <span>A Short Video</span>
+            <h3>Let us see what all we sell...</h3>
+        </div>  
+<div>
+        <video width="500px" height="500px" controls class="video" id="video">
+            <source src="images/Snapinsta.app_video_GAUtZgpI1gbuHAwBAKBn0ok6ex8Qbq_EAAAF.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+
+    </section>
+    
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script> 
+<script>
+    const openButton = document.getElementById('open-dialog');
+    const dialog = document.getElementById('my-dialog');
+    const closeButton = document.getElementById('close-dialog');
+
+    openButton.addEventListener('click', () => {
+       dialog.showModal();
+    });
+
+    closeButton.addEventListener('click', () => {
+       dialog.close();
+    });
+
+    const openButton1 = document.getElementById('open-dialog1');
+    const dialog1 = document.getElementById('my-dialog1');
+    const closeButton1 = document.getElementById('close-dialog1');
+
+    openButton1.addEventListener('click', () => {
+       dialog.showModal();
+    });
+
+    closeButton1.addEventListener('click', () => {
+       dialog.close();
+    });
+
+    const openButton2 = document.getElementById('open-dialog2');
+    const dialog2 = document.getElementById('my-dialog2');
+    const closeButton2 = document.getElementById('close-dialog2');
+
+    openButton2.addEventListener('click', () => {
+       dialog.showModal();
+    });
+
+    closeButton2.addEventListener('click', () => {
+       dialog.close();
+    });
+ </script>
+
+</body>
+</html>
